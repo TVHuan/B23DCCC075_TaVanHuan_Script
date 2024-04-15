@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+function sortArray(arr) {
+    return arr.sort((a, b) => a - b);
+}
+function setArray(arr){
+    return Array.from(new Set(arr))
+
+}
+    
+
+
+let arr = Array.from({length: 10}, () => Math.floor(Math.random() * 100)-10);
+
+
+console.log(sortArray(arr));
+console.log(setArray(arr));
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function somax(arr){
+        return Math.max(...arr);
+    }
+    function socp(arr) {
+    let Newarr  = [];
+    for(let i = 0; i < arr.length; i++) {
+        if(Math.sqrt(arr[i]) % 1 === 0) {
+            Newarr.push(arr[i]);
+        }
+    }
+    return Newarr;
+}
+    
+function sotb(arr) {
+    let sum = 0;
+    for(let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    let tbc = sum / arr.length;
+
+    let arrNew = [];
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] > tbc) {
+            arrNew.push(arr[i]);
+        }
+    }
+
+    return arrNew;
+}
+function tbcka(arr) {
+    let sum = 0;
+    let count = 0;
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] >= 0) {
+            sum += arr[i];
+            count++;
+        }
+    }
+    return sum / count ;
+}
+
+
+    let arr = Array.from({length: 10}, () => Math.floor(Math.random() * 100) -10);
+    console.log(arr)
+    console.log("số lớn nhất trong mảng là:",somax(arr))
+    console.log("các số chính phương trong mảng là:",socp(arr))
+    console.log("các số lớn hơn tbc là:",sotb(arr) )
+    console.log("số trung bình cộng của các số không âm là:", tbcka(arr))
+</script>
+</body>
+</html>
