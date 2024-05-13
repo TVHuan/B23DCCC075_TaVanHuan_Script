@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <center>
+        <h1> Bài_2 </h1>
+        <input type="text" id="text" placeholder=" New item" >
+        <button class="addbutton"> add </button>
+        <ul id="list"></ul>
+    </center>
+    <script>
+        $('.addbutton').on('click', function(){
+            let add = $('#text').val();
+            $('#list').append('<p class="text">' + add + '</p>' );
+            $('#nv').val('');
+        });
+        
+    </script>
+</body>
+</html>
+
