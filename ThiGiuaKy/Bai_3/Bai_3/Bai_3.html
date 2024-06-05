@@ -1,0 +1,155 @@
+<!--
+Họ tên: Tạ Văn Huấn
+MSV: B23DCCC075
+Lớp: D23BCQCC03-B
+Bai_3
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiem tra giua ky</title>
+</head>
+
+<style>
+    body, html{
+        height: 100%;
+        margin: 0;
+        font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif
+    }
+    .bang{
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    header h1{
+        margin: 0;
+        color: #333;
+        font-size: 36px;
+        margin-top: 5px;
+    }
+    header p{
+        margin: 0;
+        color: #666;
+        font-size: 16px;
+    }
+    section{
+        margin-top: 20px;
+
+    }
+    .section-title{
+        color: #333;
+        border-bottom: 2px solid #eaecef;
+        padding-bottom: 10px;
+        margin-bottom: 5px;
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+    }
+    ul li{
+        background-color: #fff;
+        border: 1px solid #eaecef;
+        padding: 10px;
+        margin-bottom: 5px;
+    }
+    footer{
+        text-align: center;
+        padding: 20px 0;
+        background-color: #f8f9fa;
+    }
+    footer p {
+        color: #666;
+        font-size: 16px;
+    }
+    @media (min-width: 768px) {
+        .bang {
+            width: 750px;
+        }
+        
+    }
+
+    @media (min-width: 992px) {
+        .bang {
+            width: 970px;
+        }
+        
+    }
+
+    @media (min-width: 1200px) {
+        .bang {
+            width: 1170px;
+        }
+        
+    }
+
+
+
+</style>
+<body>
+
+    <div class="bang">
+        <header>
+            <h1>Họ và Tên: Tạ Văn Huấn </h1> <img src="./ThiGiuaKy/Bai_3/img/3C22.301021000115.IMG_0593.jpg" width="30px">
+            <p>Tuổi: 18</p>
+            <p>Địa chỉ: Bá Hiến, Bình xuyên, Vĩnh Phúc</p>
+            <p>SDT: 0335095011</p>
+            <p>Email: tahuan1906@gmail.com</p>
+        </header>
+        <section class="hocvan">
+            <ul>
+            <h2 class="section-title">Học Vấn </h2>
+            <li>Học Viện Công Nghệ Bưu Chính Viễn Thông</li>
+            <li>js,python,c++</li>
+            <!--thêm học vấn-->
+            </ul>
+        </section>
+        <section class="kinhnghiem">
+            <h2 class="section-title"> Kinh nghiệm làm việc</h2>
+            <ul id="dskinhnghiem">
+                <li> em đã làm việc tại *** trong 3 năm. có kinh nghiệm làm web</li>
+                <!--thêm kinh nghiệm làm việc-->
+            </ul>
+            <textarea class="newexperience" placeholder="nhập kinh nghiệm của bạn..."></textarea>
+            <button onclick="addExperience()"> Thêm kinh nghiệm</button>
+            <div id="experience"> </div>
+        </section>
+        <section class="duancanhan">
+            <h2 class="section-title">Dự án cá nhân </h2>
+            <ul>
+                 <a href="#" >Link dự án 1</a></li>
+                 <a href="#" >Link dự án 2</a></li>
+            </ul>
+        </section>
+        <section class="kynang">
+            <h2 class="section-title"> Ưu Nhược điểm </h2>
+            <ul>
+
+            </ul>
+        </section>
+        <section>
+            <h2 class="section-title"> trang cá nhân </h2>
+            <a href="https://github.com/dashboard">github</a> <br>
+            <a href="https://www.facebook.com/huan.ta.7773631/">facebook</a>
+        </section>
+
+    </div>
+
+<script>
+    function addExperience() {
+        var them = new XMLHttpRequest();
+        them.onreadystatechange = function(){
+            if ( this.readyState == 4 && this.status == 200) {
+                document.getElementById("experience").innerHTML += this.responseText;
+            }
+        }
+        them.open("", true);
+        them.send();
+    }
+
+</script>
+</body>
+</html>
